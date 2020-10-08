@@ -1,0 +1,70 @@
+.footer {
+  padding: 50px $gap 72px;
+
+  color: $color-light;
+  background-color: $color-primary;
+
+  &__container {
+    display: grid;
+
+    @extend %container;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  &__title {
+    display: block;
+
+    margin-right: -0.5em;
+
+    text-align: center;
+    letter-spacing: 0.33em;
+    text-transform: uppercase;
+
+    color: $color-gray;
+
+    font-weight: 100;
+
+    &--accent {
+      display: block;
+
+      margin-left: -16px;
+
+      letter-spacing: 0.05em;
+
+      color: #e5e5e5;
+
+      font-weight: 700;
+    }
+  }
+
+  &__social {
+    display: grid;
+    justify-content: center;
+
+    padding: 10px 0 14px $gap;
+
+    grid-template-columns: repeat(5, 3.215rem);
+
+    .fab {
+      font-size: 2.25rem;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}
+
+hr {
+  width: 75px;
+  height: 2px;
+  margin: 14px auto 19px;
+
+  color: rgba($color-gray, 0.4);
+  border: none;
+  background-color: rgba($color-gray, 0.4);
+}
+
+

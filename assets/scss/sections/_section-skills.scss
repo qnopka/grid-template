@@ -1,0 +1,129 @@
+.skills {
+  padding: 10px 10px 40px;
+
+  @include sm {
+    padding: $gap;
+  }
+
+  &__container {
+    display: grid;
+
+    @include lg-min {
+      grid-gap: 10px;
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      grid-gap: 10px;
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      font-size: 1.125rem;
+
+      grid-gap: 10px;
+      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      font-size: 1.125rem;
+
+      grid-gap: $gap;
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+
+    padding-top: $gap;
+  }
+}
+
+.skill-item {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: calc(33.333vh - 13.333px);
+
+  background-color: $color-primary;
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transition: transform 0.5s;
+
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  &:hover .skill-item__overlay {
+    opacity: 0.95 !important;
+  }
+
+  &:hover .skill-item__image {
+    transform: scale(1.1);
+  }
+
+  &:hover .skill-item__link {
+    color: $color-accent;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: 0;
+
+    transition: color 0.5s ease-in-out;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: $gap;
+
+    letter-spacing: 0.1em;
+
+    font-size: 1.25rem;
+
+    @include md-sm {
+      font-size: 1.125rem;
+    }
+    @include sm {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}

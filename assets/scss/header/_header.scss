@@ -1,0 +1,14 @@
+.header {
+  position: relative;
+
+  display: grid;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 100px $gap;
+
+  color: $color-light;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
