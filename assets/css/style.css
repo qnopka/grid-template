@@ -697,10 +697,6 @@ h3 {
   transition: margin-top 0.5s;
 }
 
-.header-content__container {
-  margin: 0 -20px;
-}
-
 .header-content__title {
   text-align: center;
   text-transform: uppercase;
