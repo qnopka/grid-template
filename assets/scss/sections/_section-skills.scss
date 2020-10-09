@@ -44,12 +44,16 @@
 
 .skill-item {
   position: relative;
-
   overflow: hidden;
-
-  min-height: calc(33.333vh - 13.333px);
-
   background-color: $color-primary;
+
+  @media (min-height: 691px) {
+    min-height: calc(33.333vh - 13.333px);
+  }
+
+  @media (max-height: 691px - 0.2) {
+    min-height: calc(230px - 20px * 0.66);
+  }
 
   &__overlay {
     position: absolute;

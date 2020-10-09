@@ -6,11 +6,9 @@
 
   &__btn {
     position: relative;
-
     width: 30px;
     height: 22.5px;
     margin: $gap $gap 0 0;
-
     cursor: pointer;
     transition: 0.5s ease-in-out;
     transform: rotate(0deg);
@@ -75,24 +73,20 @@
     padding: 0;
 
     list-style: none;
-
     font-size: 1.125rem;
+    z-index: 1;
 
     @include md-min {
       display: grid;
       justify-content: end;
-
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }
     @include md {
       position: absolute;
       top: 100%;
       right: $gap;
-
       display: none;
-
       text-align: right;
-
       background-color: rgba($color-gray-dark, 0.9);
     }
 

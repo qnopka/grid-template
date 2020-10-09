@@ -511,8 +511,6 @@ h2 {
 h3 {
   letter-spacing: 0.1em;
   color: #2d3651;
-  font-family: "Roboto Slab", serif;
-  font-weight: 900;
   line-height: 1.2em;
 }
 
@@ -671,6 +669,7 @@ h3 {
   padding: 0;
   list-style: none;
   font-size: 1.125rem;
+  z-index: 1;
 }
 
 .header-navbar__list--active {
@@ -696,6 +695,10 @@ h3 {
   -webkit-transition: margin-top 0.5s;
   -o-transition: margin-top 0.5s;
   transition: margin-top 0.5s;
+}
+
+.header-content__container {
+  margin: 0 -20px;
 }
 
 .header-content__title {
@@ -733,7 +736,6 @@ h3 {
 .skill-item {
   position: relative;
   overflow: hidden;
-  min-height: calc(33.333vh - 13.333px);
   background-color: #2d3651;
 }
 
@@ -1072,6 +1074,7 @@ h3 {
 
 .post-item__text h3 {
   margin: 0;
+  font-family: "Roboto Slab", serif;
   letter-spacing: 0.05em;
   color: #637588;
 }
@@ -1172,6 +1175,12 @@ hr {
   }
 }
 
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.333vh - 13.333px);
+  }
+}
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -1207,7 +1216,7 @@ hr {
     padding: 18px 20px;
   }
   .header-content__title {
-    margin: 0 0 53px 0;
+    margin: 0 0 53px;
   }
   .skills__container {
     grid-gap: 10px;
@@ -1241,7 +1250,7 @@ hr {
     font-size: 1rem;
   }
   .header-content__title {
-    margin: 0 0 43px 0;
+    margin: 0 0 43px;
   }
   .skills__container {
     grid-gap: 10px;
@@ -1308,7 +1317,7 @@ hr {
     background-color: rgba(68, 89, 110, 0.9);
   }
   .header-content__title {
-    margin: 0 0 33px 0;
+    margin: 0 0 33px;
   }
 }
 
@@ -1367,6 +1376,12 @@ hr {
   }
   .post-item__text p {
     line-height: 1.15;
+  }
+}
+
+@media (max-height: 690.8px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 

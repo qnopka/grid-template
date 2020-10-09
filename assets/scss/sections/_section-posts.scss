@@ -131,9 +131,9 @@
 
       h3 {
         margin: 0;
+        font-family: $font-header;
 
         letter-spacing: 0.05em;
-
         color: $color-gray;
 
         @include md-sm {

@@ -72,9 +72,6 @@ h3 {
   letter-spacing: 0.1em;
 
   color: $color-primary;
-
-  font-family: $font-header;
-  font-weight: 900;
   line-height: 1.2em;
 
   @include lg-min {

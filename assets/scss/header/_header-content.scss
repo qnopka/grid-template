@@ -1,10 +1,10 @@
 .header-content {
   position: relative;
-
   transition: margin-top 0.5s;
 
   &__container {
     @extend %container;
+    margin: 0 -20px;
   }
 
   &__title {
@@ -12,13 +12,13 @@
     text-transform: uppercase;
 
     @include lg-min {
-      margin: 0 0 53px 0;
+      margin: 0 0 53px;
     }
     @include lg-md {
-      margin: 0 0 43px 0;
+      margin: 0 0 43px;
     }
     @include md {
-      margin: 0 0 33px 0;
+      margin: 0 0 33px;
     }
   }
 
